@@ -6,3 +6,8 @@ const swiperFeature = new Swiper(".mySwiper1", {
         prevEl: ".feature-left-btn",
     },
 });
+
+function resetSwiper() {
+    swiperFeature.slideTo(0);
+    swiperFeature.update();
+}

@@ -1,33 +1,29 @@
-let tabsTitle = document.querySelectorAll('.feature-menu-item')
-    // console.log(tabsTitle)
-tabsTitle.forEach(element => {
-    element.addEventListener('click', function() {
-        // let curTab = document.querySelector('.feature-slide-box[data-content="' + this.dataset.id + '"]')
-        // console.log(curTab)
-        let curTab1 = document.querySelectorAll('.feature-slide-box[data-content="' + this.dataset.id + '"]')
-        curTab1.forEach(e => {
-            if (e.classList.contains('open')) {
-                e.classList.remove('open')
-            } else {
-                e.classList.add('open')
+const featureMenuItems = document.querySelectorAll('.feature-menu-item');
+const featureSlideBoxes = document.querySelectorAll('.feature-slide-box');
+
+featureMenuItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+        if (!item.classList.contains('active')) {
+            const activeMenuItem = document.querySelector('.feature-menu-item.active');
+            if (activeMenuItem) {
+                resetSwiper();
+                activeMenuItem.classList.remove('active');
             }
-        })
-
-        if (document.querySelector('.feature-menu-item.active') !== null) {
-            document.querySelector('.feature-menu-item.active').classList.remove('active')
-            document.querySelector('.feature-slide-box.open').classList.remove('open')
-
+            item.classList.add('active');
+            resetSwiper();
+            featureSlideBoxes.forEach(function(box) {
+                if (box.dataset.content === item.dataset.id) {
+                    box.style.display = 'block';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        } else {
+            item.classList.remove('active');
+            resetSwiper();
+            featureSlideBoxes.forEach(function(box) {
+                box.style.display = 'block';
+            });
         }
-        // let item = document.querySelectorAll('.feature-slide-box.open')
-        // item.forEach(el => {
-        //         if (el.classList.contains('open')) {
-        //             el.classList.remove('open')
-        //         }
-        //     })
-        // .classList.remove('active')
-        // item.classList.add('active')
-
-        this.classList.add('active')
-            // curTab1.classList.add('open')
-    })
-})
+    });
+});
