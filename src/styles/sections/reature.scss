@@ -113,8 +113,8 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
-    & a {
-        padding-left: 10px;
+    & svg {
+        padding-right: 10px;
         text-decoration: none;
     }
     &:hover {
@@ -205,9 +205,6 @@
     background: #D1FAE5;
     color: #10B981;
     fill: #10B981;
-    & a {
-        color: #10B981;
-    }
     & svg {
         filter: invert(53%) sepia(95%) saturate(3063%) hue-rotate(129deg) brightness(102%) contrast(87%);
     }
