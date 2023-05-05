@@ -1,6 +1,10 @@
 .conteiner {
     width: 1200px;
     margin: 0 auto;
+    @media (min-width: 320px) and (max-width: 1199px) {
+        width: auto;
+        padding: 0 10px;
+    }
 }
 
 .header {
@@ -21,7 +25,7 @@
     position: relative;
 }
 
-.header-logo a {
+.header-logo {
     text-decoration: none;
     font-style: normal;
     font-weight: 700;
@@ -29,6 +33,9 @@
     line-height: 20px;
     text-transform: capitalize;
     color: #1B1C57;
+}
+
+.header-logo span {
     padding-left: 12px;
 }
 
@@ -175,7 +182,8 @@
 
 .header-box-right {
     position: relative;
-    width: calc(50% - 10px);
+    width: 50%;
+    // width: calc(50% - 10px);
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -260,19 +268,24 @@
     // position: absolute;
     // bottom: 50px;
     // overflow: hidden;
-    width: 720px;
+    width: 672px;
     // width: 100%;
     margin-bottom: 48px;
+    margin-left: 10px !important;
+    padding-left: 48px !important;
+    // padding-right: 72px !important;
 }
 
 .slider-box {
     display: flex;
+    flex-direction: row;
     align-items: center;
     background: #FFFFFF;
     box-shadow: 0px 11px 48px rgba(51, 51, 51, 0.06);
     border-radius: 32px;
     padding: 24px;
     cursor: grab;
+    // margin-bottom: 24px;
 }
 
 .slider-description {
