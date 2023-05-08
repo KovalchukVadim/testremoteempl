@@ -11,6 +11,10 @@
         position: relative;
         margin-left: 35px;
         margin-bottom: 12px;
+        @media (min-width: 320px) and (max-width: 950px) {
+            display: flex;
+            justify-content: center;
+        }
         &::before {
             content: "";
             display: block;
@@ -19,6 +23,9 @@
             background: #F59E0B;
             top: 50%;
             position: absolute;
+            @media (min-width: 320px) and (max-width: 950px) {
+                top: 0;
+            }
         }
     }
 }
@@ -28,6 +35,10 @@
     justify-content: space-between;
     margin-left: 35px;
     margin-left: 35px;
+    @media (min-width: 320px) and (max-width: 950px) {
+        flex-direction: column;
+        align-items: center;
+    }
     & .feature-menu-title {
         font-style: normal;
         font-weight: 600;
@@ -35,16 +46,46 @@
         line-height: 40px;
         text-transform: capitalize;
         color: #1B1C57;
+        @media (min-width: 320px) and (max-width: 530px) {
+            font-size: 24px;
+        }
     }
     & .feature-menu-tabs {
         display: flex;
+        @media (min-width: 531px) and (max-width: 950px) {
+            padding-top: 25px;
+        }
+        @media (min-width: 320px) and (max-width: 530px) {
+            padding-top: 25px;
+            flex-direction: column;
+        }
         & .feature-menu-item {
+            padding: 12px 24px;
+            border: 1px solid #E0E3EB;
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            & svg {
+                padding-right: 10px;
+                text-decoration: none;
+            }
+            &:hover {
+                border-color: #F59E0B;
+            }
             margin-left: 16px;
             margin-right: 16px;
+            @media (min-width: 320px) and (max-width: 950px) {
+                margin: 1px;
+                padding: 8px 12px;
+            }
         }
     }
     & .feature-menu-arrows {
         display: flex;
+        @media (min-width: 320px) and (max-width: 950px) {
+            padding-top: 25px;
+        }
     }
 }
 
@@ -56,6 +97,10 @@
     border-radius: 32px;
     align-items: center;
     width: 60px;
+    @media (min-width: 320px) and (max-width: 950px) {
+        width: auto;
+        padding: 12px 25px;
+    }
     cursor: pointer;
     &:hover {
         background: #10B981;
@@ -80,6 +125,10 @@
     border-radius: 32px;
     align-items: center;
     width: 60px;
+    @media (min-width: 320px) and (max-width: 950px) {
+        width: auto;
+        padding: 12px 25px;
+    }
     cursor: pointer;
     &:hover {
         background: #10B981;
@@ -106,28 +155,30 @@
     border-left: 1px solid #fff;
 }
 
-.feature-menu-item {
-    padding: 12px 24px;
-    border: 1px solid #E0E3EB;
-    border-radius: 32px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    & svg {
-        padding-right: 10px;
-        text-decoration: none;
-    }
-    &:hover {
-        border-color: #F59E0B;
-        // background: #d1f5fa;
-    }
-}
-
+// .feature-menu-item {
+//     padding: 12px 24px;
+//     border: 1px solid #E0E3EB;
+//     border-radius: 32px;
+//     display: flex;
+//     justify-content: center;
+//     cursor: pointer;
+//     & svg {
+//         padding-right: 10px;
+//         text-decoration: none;
+//     }
+//     &:hover {
+//         border-color: #F59E0B;
+//         // background: #d1f5fa;
+//     }
+// }
 .feature-slide {
     display: flex;
     font-style: normal;
     font-weight: 500;
     width: 111%;
+    @media (min-width: 320px) and (max-width: 1450px) {
+        width: 100%;
+    }
     & .feature-slide-box {
         padding-top: 40px;
         padding-left: 20px;
@@ -135,6 +186,11 @@
         cursor: grab;
         & .feature-slide-img {
             position: relative;
+        }
+        & .feature-slide-img img {
+            @media (min-width: 320px) and (max-width: 530px) {
+                width: 100%;
+            }
         }
         & .feature-absolute {
             font-size: 14px;
@@ -166,12 +222,18 @@
             line-height: 32px;
             color: #0E1735;
             padding-top: 24px;
+            @media (min-width: 320px) and (max-width: 530px) {
+                font-size: 18px;
+            }
         }
         & .feature-desc {
             font-size: 20px;
             line-height: 32px;
             color: #3C4563;
             padding-top: 8px;
+            @media (min-width: 320px) and (max-width: 530px) {
+                font-size: 16px;
+            }
         }
     }
 }
@@ -191,6 +253,9 @@
             font-weight: 500;
             color: #0E1735;
             line-height: 24px;
+            @media (min-width: 320px) and (max-width: 530px) {
+                font-size: 16px;
+            }
         }
         & span {
             font-weight: 500;
