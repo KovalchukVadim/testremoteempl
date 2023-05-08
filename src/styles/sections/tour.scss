@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    @media (min-width: 320px) and (max-width: 1025px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .tour-left {
@@ -170,7 +174,7 @@
     transform: rotate(90deg);
     z-index: -1;
     top: -50px;
-    right: -110px;
+    right: 40px;
 }
 
 .tour-spot-two {
@@ -183,5 +187,5 @@
     transform: rotate(90deg);
     z-index: -1;
     top: 65px;
-    right: -120px;
+    right: 10px;
 }

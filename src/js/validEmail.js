@@ -14,6 +14,8 @@ function validateEmail() {
     } else {
         result.textContent = `${email} не коректна пошта, будь-ласка введіть ще раз!`;
         result.style.color = 'red'
+        result.style.fontSize = '14px'
+
 
     }
 }
