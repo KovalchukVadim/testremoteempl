@@ -32,7 +32,7 @@
     }
 }
 
-.search {
+.search-footer {
     width: 496px;
     height: 56px;
     background: #FFFFFF;
@@ -43,7 +43,11 @@
     @media (min-width: 320px) and (max-width: 530px) {
         width: auto !important;
     }
-    & .search-email {
+    .search-footer-icon {
+        padding-left: 27px;
+        padding-right: 19px;
+    }
+    & .search-footer-email {
         flex-grow: 2;
         border: none;
         font-style: normal;
@@ -52,7 +56,10 @@
         line-height: 22px;
         color: #888B97;
     }
-    & .search-btn-email {
+    .search-footer-email:focus {
+        outline: none;
+    }
+    & .search-footer-btn-email {
         color: white;
         align-items: center;
         padding: 12px 16px;

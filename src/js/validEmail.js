@@ -4,7 +4,7 @@ function isValidEmail(em) {
 }
 
 function validateEmail() {
-    const inpEmail = document.querySelector('.search-email');
+    const inpEmail = document.querySelector('.search-footer-email');
     const result = document.getElementById("result");
     const email = inpEmail.value;
 
